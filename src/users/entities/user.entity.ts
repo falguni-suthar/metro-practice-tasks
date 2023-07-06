@@ -1,4 +1,5 @@
 import { Exclude } from 'class-transformer';
+import { Role } from 'src/helper/enum/role.enum';
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, OneToMany } from 'typeorm';
 
 @Entity()
@@ -95,5 +96,7 @@ export class User extends BaseEntity {
 
     @Column({ default: false })
     walkthrough_notification: boolean;
-}
 
+    @Column({default: false})
+    is_admin: boolean;
+}

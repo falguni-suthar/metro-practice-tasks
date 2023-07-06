@@ -8,7 +8,6 @@ import { code } from 'src/helper/codes';
 import { SigninAuthDto } from './dto/signin-auth.dto';
 import { JwtService } from '@nestjs/jwt';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
-import { ResponseDto } from 'src/helper/dto/response.dto';
 import { AuthResultDto } from './dto/auth-result.dto';
 
 @Injectable()

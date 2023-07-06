@@ -78,10 +78,16 @@ export class UsersService {
           data: filestored
         };
       }
-      
     } catch (error) {
       throw error;
     }
   }
 
+  async createUser(data) {
+    try {
+      return data; 
+    } catch (error) {
+      throw error;
+    }
+  }
 }

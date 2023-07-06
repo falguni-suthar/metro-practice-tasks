@@ -6,6 +6,7 @@ import { MulterModule } from '@nestjs/platform-express';
 import { memoryStorage } from 'multer';
 import { User } from './entities/user.entity';
 import { Image } from './entities/image.entity';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { Image } from './entities/image.entity';
     TypeOrmModule.forFeature([Image]),
     MulterModule.register({
       storage: memoryStorage()
-    })
+    }),
+    HttpModule
   ],
   controllers: [UsersController],
   providers: [UsersService]
